@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#091718">
+<title>CIRCLE | Founder, Partners & Spending & Guest Demos v8</title>
+<style>
+:root{color-scheme:dark;--bg:#091718;--panel:#15282a;--panel2:#1d3031;--line:#3d5853;--gold:#dfbe83;--gold2:#f4d9a7;--text:#f8f2e7;--muted:#a8bfba;--mint:#acf2d2;--red:#ffd0ce}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 7% 0%,#263c33 0%,#102123 34%,#081518 80%);color:var(--text);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;padding:calc(22px + env(safe-area-inset-top)) 16px calc(65px + env(safe-area-inset-bottom))}main{max-width:1120px;margin:auto}a{color:var(--gold2)}header{display:flex;gap:13px;align-items:center;padding-bottom:19px;border-bottom:1px solid var(--line);margin-bottom:24px}.logo{height:51px;width:51px;border-radius:50%;border:3px solid var(--gold);border-right-color:transparent;display:grid;place-items:center;color:var(--gold);font:32px Georgia,serif;flex-shrink:0;transform:rotate(-10deg)}.logo span{transform:rotate(10deg)}.wordmark{font-size:25px;letter-spacing:7px;line-height:1.1}.submark{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:8px}.eyebrow{color:var(--gold);letter-spacing:2.6px;text-transform:uppercase;font-size:10px;font-weight:800;margin-bottom:10px}h1{font-size:clamp(30px,4.5vw,46px);font-weight:520;line-height:1.12;margin:5px 0 12px}h2{font-size:22px;font-weight:570;line-height:1.2;margin:0 0 12px}h3{font-size:17px;margin:0 0 8px}p{color:var(--muted);margin:0 0 17px}.notice{background:#382e24;border:1px solid #7b6340;color:#f1dcb4;border-radius:13px;padding:15px;margin:17px 0;font-size:13px}.notice.good{background:#193a32;border-color:#467963;color:#b3f4d4}.notice.bad{background:#3b2929;border-color:#8a5656;color:var(--red)}.card{border:1px solid var(--line);border-radius:18px;background:linear-gradient(138deg,#1a2f31,#122326);padding:21px;margin:14px 0;box-shadow:0 16px 36px #0002}.narrow{max-width:690px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.two{display:grid;grid-template-columns:1fr 1fr;gap:17px}.kpi{padding:16px;background:#172d2c;border:1px solid #385a52;border-radius:13px}.kpi small{color:var(--muted);font-size:12px}.kpi strong{font-size:27px;display:block;margin:6px 0;overflow-wrap:anywhere}.kpi em{color:#8ea9a3;font-size:11px;font-style:normal}.field{margin:13px 0}.field label{display:block;color:#deebe6;font-size:13px;margin-bottom:7px}.help{font-size:11px;color:#a4bab2;margin:6px 0 0}input,select,textarea{width:100%;min-height:45px;padding:12px;border:1px solid #4c6861;border-radius:10px;font:inherit;background:#0a1c1e;color:var(--text)}select option{background:#15282a}textarea{min-height:80px;resize:vertical}input:focus,select:focus,textarea:focus,button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}button{font:inherit;font-weight:760;cursor:pointer;color:#142019;background:var(--gold);border:1px solid var(--gold);border-radius:10px;padding:11px 15px;min-height:45px}button.secondary{color:var(--gold2);background:transparent}button.ghost{color:#c9e0d6;border-color:#4d6b61;background:transparent}button:disabled{opacity:.55;cursor:progress}.row{display:flex;flex-wrap:wrap;gap:9px;align-items:center}.hide{display:none!important}.badge{background:#1a3b31;border:1px solid #467e61;color:var(--mint);border-radius:100px;font-size:11px;padding:6px 11px}.status{white-space:pre-wrap;color:var(--mint);margin:17px 0;font-size:13px;min-height:20px}.status.bad{color:var(--red)}.tabs{display:flex;overflow-x:auto;scrollbar-width:none;gap:8px;margin:18px 0 12px;padding:3px 0 10px}.tabs::-webkit-scrollbar{display:none}.tab{white-space:nowrap;flex-shrink:0;background:#162728;border-color:#456055;color:#d0e2da}.tab.active{background:var(--gold);color:#11221b;border-color:var(--gold)}.line{border-top:1px solid var(--line);margin:18px 0}.item{border:1px solid #3e5b55;border-radius:12px;padding:15px;margin:9px 0;background:#102527}.item strong{font-size:17px}.item .meta{font-size:12px;color:#a8c0b9;margin-top:5px}.tag{border-radius:99px;border:1px solid #9e875d;padding:3px 8px;font-size:10px;letter-spacing:.7px;text-transform:uppercase;color:#f1d3a0}.empty{background:#122629;border:1px dashed #3b5854;padding:17px;border-radius:12px;color:#aec0bb;font-size:13px}.money{font-variant-numeric:tabular-nums}.foot{margin-top:36px;font-size:11px;color:#94ada5;line-height:1.65}.listinner{border-top:1px solid #344d46;margin-top:10px;padding-top:9px;font-size:12px;color:#bcd1c9}.split{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.small{font-size:12px}.hint{color:#acc2b8;font-size:12px}.section-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:13px 0}.denied{max-width:690px}
+@media(max-width:740px){.two{grid-template-columns:1fr}.card{padding:18px}.wordmark{font-size:21px}.kpi strong{font-size:23px}}@media(max-width:350px){.grid{grid-template-columns:1fr}}
+ .member-card{background:radial-gradient(circle at 96% -8%,#59492d 0%,transparent 39%),linear-gradient(130deg,#131c20,#111b18);border:1px solid #b89b67;border-radius:16px;padding:18px;margin:13px 0;min-height:170px;box-shadow:0 10px 25px #0003;position:relative;overflow:hidden}.member-card:before{content:'C';position:absolute;right:15px;top:-45px;font:170px Georgia,serif;color:#e5c58b16;pointer-events:none}.member-card .cardword{font-size:19px;letter-spacing:5px;color:#e6ca9a}.member-card .cardlounge{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#c4b89f;margin:13px 0}.member-card .cardname{font-size:20px;font-weight:650}.member-card .cardfoot{display:flex;gap:10px;justify-content:space-between;flex-wrap:wrap;color:#d2c09f;font-size:11px;margin-top:17px}.member-card .cardcode{font-family:ui-monospace,Menlo,monospace;letter-spacing:1px;color:#fff4d4} .kpi strong{font-size:clamp(18px,3vw,24px);overflow-wrap:normal;word-break:normal} .codebox{font-family:ui-monospace,Menlo,monospace;overflow-wrap:anywhere;letter-spacing:1px;padding:11px;background:#091918;border:1px dashed #b59660;border-radius:10px;color:#f3d79e;margin:10px 0}.space{margin-top:16px}.micro{font-size:12px;color:#b8cbc2}</style>
+</head>
+<body><main>
+<header><div class="logo" aria-hidden="true"><span>C</span></div><div><div class="wordmark">CIRCLE</div><div class="submark">Unified HQ & Partner Access · Version 8</div></div></header>
+<div class="eyebrow">CIRCLE / VERSION 8 · MEMBERSHIP FEE SIMULATION</div>
+<h1>One platform. Every private circle.</h1>
+<p>One secure sign-in for CIRCLE Founder Headquarters and assigned lounge accounts. Each partner sees only what their role permits.</p>
+<div class="notice"><b>DEVELOPMENT ONLY.</b> Lounge, package and fictional spending records are written to Supabase. Commercial terms are <b>draft proposals</b>, not contracts, invoices, commissions earned or funds received. Do not use actual customer payment information.</div>
+<section class="card narrow" id="connectionPanel">
+<div class="eyebrow">First-time connection</div><h2>Connect CIRCLE once</h2>
+<p>Version 8 automatically reuses the public project settings saved by earlier CIRCLE pages in the <b>same browser storage</b>. If Safari Private Browsing has cleared them, enter the project URL and <b>publishable</b> key once more.</p>
+<div class="field"><label for="projectUrl">Supabase project URL</label><input id="projectUrl" type="url" spellcheck="false" autocapitalize="off" placeholder="https://your-project.supabase.co" autocomplete="off"></div>
+<div class="field"><label for="projectKey">Publishable API key (sb_publishable_...)</label><input id="projectKey" type="text" spellcheck="false" autocapitalize="off" placeholder="sb_publishable_..." autocomplete="off"></div>
+<button type="button" id="connectButton">Connect CIRCLE</button>
+<p class="help">These two settings are designed for public clients. Never enter a database password, sb_secret_ or service_role key. For more reliable storage on iPhone, open the website in a regular Safari tab.</p>
+</section>
+<section class="card narrow hide" id="loginPanel">
+<div class="eyebrow">CIRCLE account authentication</div><h2>Sign in to CIRCLE</h2><p>Use an existing Supabase CIRCLE Founder or assigned lounge account.</p>
+<form id="loginForm"><div class="field"><label for="email">Account email</label><input id="email" type="email" autocomplete="username" required></div><div class="field"><label for="password">Password</label><input id="password" type="password" autocomplete="current-password" required></div><div class="row"><button id="signInButton" type="submit">Sign in</button><button class="secondary" id="resetConnection" type="button">Change project</button></div></form>
+</section>
+<section class="card denied hide" id="deniedPanel"><div class="eyebrow">Restricted access</div><h2>No CIRCLE account assignment</h2><p>This authenticated account is neither a registered CIRCLE Founder nor an assigned lounge user. Ask the Founder to authorize an existing account.</p><button class="secondary" id="deniedOut">Sign out</button></section>
+<section class="hide" id="appPanel">
+<div class="row" style="margin-top:18px"><span class="badge">● AUTHENTICATED FOUNDER</span><button class="ghost" id="refreshButton">Refresh data</button><button class="secondary" id="signOut">Sign out</button></div>
+<div class="tabs" role="tablist" aria-label="Founder HQ sections"><button type="button" class="tab active" data-tab="overview" role="tab" aria-selected="true">Overview</button><button type="button" class="tab" data-tab="lounges" role="tab" aria-selected="false">Lounges &amp; tiers</button><button type="button" class="tab" data-tab="revenue" role="tab" aria-selected="false">Revenue proposals</button><button type="button" class="tab" data-tab="access" role="tab" aria-selected="false">Accounts & access</button><button type="button" class="tab" data-tab="members" role="tab" aria-selected="false">Members &amp; cards</button><button type="button" class="tab" data-tab="fees" role="tab" aria-selected="false">Fee simulations</button><button type="button" class="tab" data-tab="spending" role="tab" aria-selected="false">Spending &amp; guests</button></div>
+<section id="tab-overview" class="tabcontent">
+<div class="grid"><div class="kpi"><small>Partner lounges</small><strong id="loungeCount">—</strong><em>Supabase venue records</em></div><div class="kpi"><small>Membership tiers</small><strong id="tierCount">—</strong><em>Configured packages</em></div><div class="kpi"><small>Demo membership records</small><strong id="membersCount">—</strong><em>Not paid or activated</em></div><div class="kpi"><small>Draft commercial proposals</small><strong id="termsCount">—</strong><em>Not signed agreements</em></div><div class="kpi"><small>Commission payments received</small><strong style="font-size:19px">Not enabled</strong><em>No payment integration</em></div></div>
+<section class="card"><div class="eyebrow">Partner network</div><h2>Your registered lounges</h2><div id="overviewList" class="empty">Loading…</div></section>
+</section>
+<section id="tab-lounges" class="tabcontent hide"><div class="two">
+<div><section class="card"><div class="eyebrow">Partner onboarding</div><h2>Create a partner lounge</h2><form id="loungeForm"><div class="field"><label for="loungeName">Lounge name</label><input id="loungeName" maxlength="120" placeholder="CIRCLE DEMO LOUNGE 3" required></div><div class="field"><label for="loungeCity">City</label><input id="loungeCity" maxlength="100" placeholder="Lagos" required></div><button id="addLounge" type="submit">Register draft lounge</button></form><p class="help">Creates a real database record, not a live commercial account.</p></section>
+<section class="card"><div class="eyebrow">Manage partner</div><h2>Edit a lounge</h2><form id="editForm"><div class="field"><label for="editLounge">Choose lounge</label><select id="editLounge" required><option value="">Select lounge</option></select></div><div class="field"><label for="editName">Name</label><input id="editName" required maxlength="120"></div><div class="field"><label for="editCity">City</label><input id="editCity" required maxlength="100"></div><div class="field"><label for="editStatus">Status</label><select id="editStatus"><option value="draft">Draft</option><option value="active">Active label (test only)</option><option value="paused">Paused</option></select></div><button id="updateLounge" type="submit">Save lounge changes</button></form></section></div>
+<div><section class="card"><div class="eyebrow">Package design</div><h2>Add a membership tier</h2><form id="tierForm"><div class="field"><label for="tierLounge">Partner lounge</label><select id="tierLounge" required><option value="">Select lounge</option></select></div><div class="field"><label for="tierName">Membership tier</label><input id="tierName" maxlength="80" placeholder="Silver / Gold / Black" required></div><div class="field"><label for="annualFee">Annual fee (₦)</label><input id="annualFee" type="number" min="0" max="999999999999" step="0.01" placeholder="100000" required></div><div class="grid"><div class="field"><label for="foodDiscount">Food discount (%)</label><input id="foodDiscount" type="number" min="0" max="100" step="0.01" value="5" required></div><div class="field"><label for="drinksDiscount">Drinks discount (%)</label><input id="drinksDiscount" type="number" min="0" max="100" step="0.01" value="0" required></div></div><div class="field"><label for="guestLimit">Guest allowance</label><input id="guestLimit" type="number" min="0" step="1" value="1" required></div><button id="addTier" type="submit">Add membership tier</button></form></section><section class="card"><div class="eyebrow">Per lounge configuration</div><h2>Membership packages</h2><div id="tierList" class="empty">Loading…</div></section></div></div></section>
+<section id="tab-revenue" class="tabcontent hide">
+<div class="two"><section class="card"><div class="eyebrow">Founder-only agreement proposals</div><h2>Revenue settings by lounge</h2><p>These are proposal settings. Changes save to Supabase but do not generate an invoice or collect money.</p><div class="field"><label for="termsLounge">Select lounge</label><select id="termsLounge" required><option value="">Select lounge</option></select></div>
+<form id="termsForm"><div class="field"><label for="setupFee">Implementation fee (₦)</label><input id="setupFee" type="number" min="0" max="999999999999" step="0.01" value="5000000" required></div><div class="grid"><div class="field"><label for="newPct">New member commission (%)</label><input id="newPct" type="number" min="0" max="100" step="0.01" value="20" required></div><div class="field"><label for="renewPct">Renewal commission (%)</label><input id="renewPct" type="number" min="0" max="100" step="0.01" value="10" required></div></div><div class="field"><label for="monthlyFee">Monthly platform fee (₦)</label><input id="monthlyFee" type="number" min="0" max="999999999999" step="0.01" value="150000" required></div><div class="field"><label for="termsNotes">Proposal notes</label><textarea id="termsNotes" maxlength="3000" placeholder="Optional draft terms. Do not paste confidential contracts."></textarea></div><button type="submit" id="saveTerms">Save proposed terms</button><p class="help">Commissions apply to membership fees, not refundable member deposits. No payments are processed here.</p></form></section>
+<section class="card"><div class="eyebrow">Scenario calculator</div><h2>Potential founder revenue</h2><p>Use sample member counts to model a scenario. None of these estimates is recorded as earned money.</p><div class="field"><label for="forecastTier">Example membership tier</label><select id="forecastTier"><option value="">Select tier</option></select></div><div class="grid"><div class="field"><label for="newMembers">Example new members</label><input id="newMembers" type="number" min="0" step="1" value="100"></div><div class="field"><label for="renewals">Example renewals</label><input id="renewals" type="number" min="0" step="1" value="0"></div></div><div id="forecastSummary" class="item">Select a lounge and package to calculate a forecast.</div></section></div>
+<section class="card"><div class="eyebrow">Your partner network</div><h2>Saved commercial proposals</h2><div id="termsList" class="empty">Loading…</div></section></section>
+<section id="tab-access" class="tabcontent hide">
+  <div class="two">
+    <section class="card">
+      <div class="eyebrow">Founder-controlled lounge accounts</div>
+      <h2>Assign an existing test user</h2>
+      <p>In <b>Supabase → Authentication → Users</b>, locate the ordinary test account you created earlier and copy its UID. Assign that user to one lounge here. Do not enter a password or secret key.</p>
+      <form id="assignmentForm">
+        <div class="field"><label for="assignLounge">Partner lounge</label><select id="assignLounge" required><option value="">Select lounge</option></select></div>
+        <div class="field"><label for="assignUser">Supabase Auth user UID</label><input id="assignUser" required maxlength="36" autocapitalize="off" spellcheck="false" placeholder="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"></div>
+        <div class="field"><label for="assignRole">Role</label><select id="assignRole"><option value="manager">Lounge manager · membership pilot</option><option value="staff">Staff · assignment only</option></select></div>
+        <button id="assignButton" type="submit">Assign lounge account</button>
+      </form>
+      <p class="help">Lounge managers can read their assigned lounge and packages, and register fictional demo members there. Access to real customer data, payments, balances and checkout is not enabled.</p>
+    </section>
+    <section class="card">
+      <div class="eyebrow">Founder view</div><h2>Account assignments</h2><div id="assignmentList" class="empty">No assignments yet.</div>
+    </section>
+  </div>
+</section>
+<section id="tab-members" class="tabcontent hide">
+  <div class="notice">TEST ONLY · Create fictional member nicknames. A displayed card ID is <b>not</b> a payment credential, VIP access pass or proof of a paid membership. No real customer details or payments.</div>
+  <div class="two">
+    <section class="card">
+      <div class="eyebrow">Founder · Membership pilot</div><h2>Register a demonstration member</h2>
+      <form id="founderMemberForm">
+        <div class="field"><label for="founderMemberLounge">Partner lounge</label><select id="founderMemberLounge" required><option value="">Select lounge</option></select></div>
+        <div class="field"><label for="founderMemberTier">Membership package</label><select id="founderMemberTier" required><option value="">Select a tier</option></select></div>
+        <div class="field"><label for="founderMemberName">Fictional nickname</label><input id="founderMemberName" maxlength="80" minlength="2" required placeholder="e.g. Circle Demo One"></div>
+        <button id="founderAddMember" type="submit">Register demo member</button>
+      </form>
+      <p class="help">New members are marked DEMO PENDING automatically. No membership fee is charged or earned.</p>
+    </section>
+    <section class="card">
+      <div class="eyebrow">Database records</div><h2>Member directory &amp; digital cards</h2>
+      <div id="founderMemberList" class="empty">No demo members yet.</div>
+    </section>
+  </div>
+</section>
+<section id="tab-fees" class="tabcontent hide">
+  <div class="notice"><b>SIMULATION ONLY.</b> These are fictional membership fee scenarios. They do not collect payments, verify receipts, activate cards, represent signed commercial terms, or create a receivable. Founder share is an <b>estimate derived from draft proposals</b>.</div>
+  <div class="two">
+    <section class="card">
+      <div class="eyebrow">Founder · Fee simulation</div><h2>Record a sample membership event</h2>
+      <form id="founderDemoFeeForm">
+        <div class="field"><label for="founderFeeLounge">Lounge</label><select id="founderFeeLounge" required></select></div>
+        <div class="field"><label for="founderFeeMember">Existing fictional member</label><select id="founderFeeMember" required></select></div>
+        <div class="field"><label for="founderFeeKind">Scenario</label><select id="founderFeeKind"><option value="new">New membership (demo)</option><option value="renewal">Annual renewal (demo)</option></select></div>
+        <div id="founderFeePreview" class="item">Select a fictional member to see the sample calculation.</div>
+        <button type="submit" id="founderDemoFeeSave">Record sample event</button>
+      </form>
+      <p class="help">The database calculates amounts from the stored tier price and draft commission settings. No amount is trusted from this browser.</p>
+    </section>
+    <section class="card">
+      <div class="eyebrow">Founder · Demo estimates</div><h2>Scenario totals</h2>
+      <div class="grid">
+        <div class="kpi"><small>Simulated membership fees</small><strong id="founderFeeTotal">—</strong><em>Not money received</em></div>
+        <div class="kpi"><small>Estimated CIRCLE share</small><strong id="founderShareTotal">—</strong><em>Not commissions earned</em></div>
+      </div>
+      <div class="line"></div><h3>Recorded demo scenarios</h3>
+      <div id="founderFeeHistory" class="empty">No fee simulations yet.</div>
+    </section>
+  </div>
+</section>
+<section id="tab-spending" class="tabcontent hide"><section class="card" id="founderSpendCard">
+<div class="eyebrow">Founder · demo spending oversight</div><h2>Simulated lounge credit &amp; guest spending</h2>
+<div class="notice"><b>TEST CREDITS ONLY.</b> These numbers are not deposits, real funds, gifts, bank balances or a payment method. The guest code is a simulation, not a secure authorization credential for real transactions. Use fictional member data exclusively.</div>
+<div class="two">
+<div>
+<div class="field"><label for="founderSpendLounge">Partner lounge</label><select id="founderSpendLounge"><option value="">Choose lounge</option></select></div>
+<div class="field"><label for="founderSpendMember">Fictional member</label><select id="founderSpendMember"><option value="">Choose member</option></select></div>
+<div class="kpi"><small>Available simulated lounge credit</small><strong id="founderSpendBalance">₦0.00</strong><em>Demo-only accounting · NOT MONEY</em></div>
+<form id="founderTopupForm" class="space"><h3>Add fictional test credit</h3><div class="field"><label for="founderTopupNgn">Amount (NGN)</label><input type="number" min="1" max="10000000" step="1" id="founderTopupNgn" placeholder="500000" required></div><button type="submit" id="founderTopupButton">Add demo credit</button></form>
+<div class="line"></div><form id="founderMenuForm"><h3>Create a fictional menu item</h3><div class="field"><label for="founderMenuName">Item name</label><input id="founderMenuName" minlength="2" maxlength="80" placeholder="Demo grilled chicken" required></div><div class="grid"><div class="field"><label for="founderMenuCategory">Category</label><select id="founderMenuCategory"><option value="food">Food</option><option value="drinks">Drinks</option><option value="other">Other (no discount)</option></select></div><div class="field"><label for="founderMenuPrice">Menu price (NGN)</label><input id="founderMenuPrice" type="number" min="1" max="100000000" step="1" placeholder="10000" required></div></div><button class="secondary" type="submit" id="founderMenuButton">Save demo menu item</button></form>
+</div>
+<div>
+<h3>Simulated checkout</h3>
+<form id="founderCheckoutForm">
+<div class="field"><label for="founderCheckoutItem">Menu item</label><select id="founderCheckoutItem" required></select></div>
+<div class="field"><label for="founderCheckoutQty">Quantity</label><input id="founderCheckoutQty" type="number" min="1" max="20" step="1" value="1" required></div>
+<div class="field"><label for="founderCheckoutGuest">Optional guest code (leave blank for member)</label><input id="founderCheckoutGuest" autocapitalize="characters" maxlength="50" placeholder="Single-use demo guest code"></div>
+<div class="item" id="founderCheckoutPreview">Choose a member and menu item to preview the discount.</div>
+<button type="submit" id="founderCheckoutButton">Confirm demo purchase</button>
+</form>
+<div class="line"></div><h3>Issue a single-use test guest pass</h3>
+<form id="founderGuestForm"><div class="grid"><div class="field"><label for="founderGuestLimit">Maximum spend (NGN)</label><input id="founderGuestLimit" type="number" min="1" max="10000000" step="1" value="100000" required></div><div class="field"><label for="founderGuestHours">Expires after (hours)</label><input id="founderGuestHours" type="number" min="1" max="24" step="1" value="24" required></div></div><button class="secondary" type="submit" id="founderGuestButton">Generate demo guest pass</button></form>
+<div id="founderGuestOutput" class="hide codebox" aria-live="polite"></div>
+<p class="help">This pilot lets authorized Founder/manager accounts simulate authorization on behalf of a fictional member. Actual members do not yet have a login or self-service guest authorization.</p>
+</div></div>
+<div class="line"></div><h3>Transaction ledger · latest demonstration entries</h3><div id="founderSpendLedger" class="empty">No demo spending entries yet.</div>
+</section></section>
+</section>
+<section id="managerPanel" class="hide">
+  <div class="row" style="margin-top:18px"><span class="badge">● ASSIGNED LOUNGE ACCOUNT</span><button class="ghost" type="button" id="managerRefresh">Refresh my lounge</button><button class="secondary" type="button" id="managerOut">Sign out</button></div>
+  <section class="card"><div class="eyebrow">CIRCLE partner workspace · V8</div><h2>My private lounge workspace</h2><p>You can see only the establishments assigned to this account through Supabase database security policies.</p>
+    <div class="grid"><div class="kpi"><small>My visible lounges</small><strong id="managerLoungeCount">—</strong><em>Venue-scoped pilot</em></div><div class="kpi"><small>Visible packages</small><strong id="managerTierCount">—</strong><em>Assigned lounge(s) only</em></div></div>
+    <div id="managerLoungeList" class="empty" style="margin-top:15px">Loading...</div>
+  </section>
+  <section id="managerMemberCard" class="card hide">
+    <div class="eyebrow">Assigned manager · Membership pilot</div><h2>Register a demonstration member</h2>
+    <p>Fictional nickname only. This records a pending demo membership under your assigned lounge; it does not receive payment or activate lounge privileges.</p>
+    <form id="managerMemberForm">
+      <div class="field"><label for="managerMemberLounge">Your assigned lounge</label><select id="managerMemberLounge" required><option value="">Select lounge</option></select></div>
+      <div class="field"><label for="managerMemberTier">Membership package</label><select id="managerMemberTier" required><option value="">Select a tier</option></select></div>
+      <div class="field"><label for="managerMemberName">Fictional nickname</label><input id="managerMemberName" maxlength="80" minlength="2" required placeholder="e.g. Circle Demo Guest"></div>
+      <button id="managerAddMember" type="submit">Register demo member</button>
+    </form>
+    <h3 style="margin-top:20px">My lounge's demo members</h3>
+    <div id="managerMemberList" class="empty">No demo members yet.</div>
+  </section>
+  <section id="managerFeeCard" class="card hide">
+    <div class="eyebrow">Assigned manager · Fee simulation only</div>
+    <h2>Membership fee / renewal scenarios</h2>
+    <p>Record a fictional membership fee event for your assigned lounge. This cannot collect money or activate a membership. Your lounge sees sample fee amounts, not CIRCLE's private commission settings.</p>
+    <form id="managerDemoFeeForm">
+      <div class="field"><label for="managerFeeLounge">Assigned lounge</label><select id="managerFeeLounge" required></select></div>
+      <div class="field"><label for="managerFeeMember">Existing fictional member</label><select id="managerFeeMember" required></select></div>
+      <div class="field"><label for="managerFeeKind">Scenario</label><select id="managerFeeKind"><option value="new">New membership (demo)</option><option value="renewal">Annual renewal (demo)</option></select></div>
+      <div id="managerFeePreview" class="item">Choose a fictional member.</div>
+      <button type="submit" id="managerDemoFeeSave">Record sample event</button>
+    </form>
+    <h3 style="margin-top:20px">Lounge demonstration history</h3>
+    <div id="managerFeeHistory" class="empty">No fee simulations yet.</div>
+  </section>
+  <section class="card" id="managerSpendCard">
+<div class="eyebrow">Assigned lounge · demo operations</div><h2>Simulated lounge credit &amp; guest spending</h2>
+<div class="notice"><b>TEST CREDITS ONLY.</b> These numbers are not deposits, real funds, gifts, bank balances or a payment method. The guest code is a simulation, not a secure authorization credential for real transactions. Use fictional member data exclusively.</div>
+<div class="two">
+<div>
+<div class="field"><label for="managerSpendLounge">Your assigned lounge</label><select id="managerSpendLounge"><option value="">Choose lounge</option></select></div>
+<div class="field"><label for="managerSpendMember">Fictional member</label><select id="managerSpendMember"><option value="">Choose member</option></select></div>
+<div class="kpi"><small>Available simulated lounge credit</small><strong id="managerSpendBalance">₦0.00</strong><em>Demo-only accounting · NOT MONEY</em></div>
+<form id="managerTopupForm" class="space"><h3>Add fictional test credit</h3><div class="field"><label for="managerTopupNgn">Amount (NGN)</label><input type="number" min="1" max="10000000" step="1" id="managerTopupNgn" placeholder="500000" required></div><button type="submit" id="managerTopupButton">Add demo credit</button></form>
+<div class="line"></div><form id="managerMenuForm"><h3>Create a fictional menu item</h3><div class="field"><label for="managerMenuName">Item name</label><input id="managerMenuName" minlength="2" maxlength="80" placeholder="Demo grilled chicken" required></div><div class="grid"><div class="field"><label for="managerMenuCategory">Category</label><select id="managerMenuCategory"><option value="food">Food</option><option value="drinks">Drinks</option><option value="other">Other (no discount)</option></select></div><div class="field"><label for="managerMenuPrice">Menu price (NGN)</label><input id="managerMenuPrice" type="number" min="1" max="100000000" step="1" placeholder="10000" required></div></div><button class="secondary" type="submit" id="managerMenuButton">Save demo menu item</button></form>
+</div>
+<div>
+<h3>Simulated checkout</h3>
+<form id="managerCheckoutForm">
+<div class="field"><label for="managerCheckoutItem">Menu item</label><select id="managerCheckoutItem" required></select></div>
+<div class="field"><label for="managerCheckoutQty">Quantity</label><input id="managerCheckoutQty" type="number" min="1" max="20" step="1" value="1" required></div>
+<div class="field"><label for="managerCheckoutGuest">Optional guest code (leave blank for member)</label><input id="managerCheckoutGuest" autocapitalize="characters" maxlength="50" placeholder="Single-use demo guest code"></div>
+<div class="item" id="managerCheckoutPreview">Choose a member and menu item to preview the discount.</div>
+<button type="submit" id="managerCheckoutButton">Confirm demo purchase</button>
+</form>
+<div class="line"></div><h3>Issue a single-use test guest pass</h3>
+<form id="managerGuestForm"><div class="grid"><div class="field"><label for="managerGuestLimit">Maximum spend (NGN)</label><input id="managerGuestLimit" type="number" min="1" max="10000000" step="1" value="100000" required></div><div class="field"><label for="managerGuestHours">Expires after (hours)</label><input id="managerGuestHours" type="number" min="1" max="24" step="1" value="24" required></div></div><button class="secondary" type="submit" id="managerGuestButton">Generate demo guest pass</button></form>
+<div id="managerGuestOutput" class="hide codebox" aria-live="polite"></div>
+<p class="help">This pilot lets authorized Founder/manager accounts simulate authorization on behalf of a fictional member. Actual members do not yet have a login or self-service guest authorization.</p>
+</div></div>
+<div class="line"></div><h3>Transaction ledger · latest demonstration entries</h3><div id="managerSpendLedger" class="empty">No demo spending entries yet.</div>
+</section>
+  <div id="staffOnlyNotice" class="notice hide">This account is assigned as <b>Lounge Staff</b>. Staff checkout and member verification are not enabled in Version 8.</div>
+  <div class="notice">Lounge accounts must never access Founder revenue agreements, commissions or other lounges' records. Version 8 tests this permission boundary; it is not ready for live customer data.</div>
+</section>
+<div id="status" class="status" role="status" aria-live="polite"></div>
+<div class="foot">CIRCLE Version 8 includes pending demo members, display-only cards, and simulated fee/renewal records. Founder estimates are private and based on unapproved draft rates. Staff have no access to member data. This is not a verified, paid or active membership system, and is not an audited or production-certified service. This pilot adds simulated credit ledgers, menu discounts, and one-use guest pass testing; real payment processing, actual member consent, card scanning, settlement and independent financial audits remain future work. Do not publish secrets or real personal information.</div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+(()=>{'use strict';
+const $=id=>document.getElementById(id),hide=(id,yes)=>$(id).classList.toggle('hide',yes);
+const asMoney=n=>new Intl.NumberFormat('en-NG',{style:'currency',currency:'NGN',maximumFractionDigits:2}).format(Number(n)||0);
+const text=(name,value,cls)=>{const el=document.createElement(name);el.textContent=String(value??'');if(cls)el.className=cls;return el};
+const err=e=>e?.message||String(e);
+const say=(m,bad=false)=>{$('status').textContent=m;$('status').classList.toggle('bad',bad)};
+const isUrl=s=>{try{let u=new URL(s.trim());return u.protocol==='https:'&&/^[a-z0-9-]+\.supabase\.co$/i.test(u.hostname)&&(!u.pathname||u.pathname==='/')}catch{return false}};
+let sb=null,founder=false,lounges=[],tiers=[],terms=[],assignments=[],members=[],managerLounges=[],managerTiers=[],managerMembers=[],demoEvents=[],demoEstimates=[],managerEvents=[];
+let v8FounderData=null,v8ManagerData=null;
+function setTabs(name){for(const b of document.querySelectorAll('[data-tab]')){const yes=b.dataset.tab===name;b.classList.toggle('active',yes);b.setAttribute('aria-selected',String(yes))}for(const a of ['overview','lounges','revenue','access','members','fees','spending'])hide('tab-'+a,a!==name)}
+for(const b of document.querySelectorAll('[data-tab]'))b.addEventListener('click',()=>setTabs(b.dataset.tab));
+function options(id,rows,first,selected=''){const el=$(id);el.replaceChildren(new Option(first,''));for(const l of rows)el.add(new Option(l.name+' · '+(l.city||'—'),l.id));if(rows.some(l=>l.id===selected))el.value=selected}
+function tierOptions(id,rows,selected=''){const el=$(id);el.replaceChildren(new Option('Select a tier',''));for(const l of rows)el.add(new Option(l.name+' · '+asMoney(l.annual_fee),l.id));if(rows.some(l=>l.id===selected))el.value=selected}
+function setMemberTiers(loungeSelect,tierSelect,availableTiers){
+ const loungeId=$(loungeSelect).value;const prev=$(tierSelect).value;
+ tierOptions(tierSelect,availableTiers.filter(t=>t.lounge_id===loungeId),prev);
+}
+function cardElement(m,loungeSource,tierSource){
+ const lounge=loungeSource.find(l=>l.id===m.lounge_id);
+ const tier=tierSource.find(t=>t.id===m.tier_id);
+ const card=text('div','','member-card');
+ card.append(text('div','CIRCLE','cardword'),text('div',lounge?.name||'Unrecognized lounge','cardlounge'),text('div',m.member_name,'cardname'));
+ const bottom=text('div','','cardfoot');bottom.append(text('span',(tier?.name||'Unknown tier')+' · DEMO PENDING'),text('span',m.member_code,'cardcode'));card.append(bottom);
+ return card;
+}
+function renderMemberCards(target,rows,loungeSource,tierSource){
+ const el=$(target);el.replaceChildren();el.className='';
+ if(!rows.length){el.append(text('div','No demonstration members registered yet.','empty'));return}
+ for(const m of rows)el.append(cardElement(m,loungeSource,tierSource));
+}
+
+function fillDemoMemberOptions(loungeElement,memberElement,visibleMembers,visibleTiers){
+ const loungeId=$(loungeElement).value, previous=$(memberElement).value;
+ const available=visibleMembers.filter(m=>m.lounge_id===loungeId);
+ const el=$(memberElement);el.replaceChildren(new Option('Select a fictional member',''));
+ for(const m of available){const t=visibleTiers.find(t=>t.id===m.tier_id);el.add(new Option(m.member_name+' · '+(t?.name||'Unknown tier')+' · '+m.member_code,m.id));}
+ if(available.some(m=>m.id===previous))el.value=previous;
+}
+function updateFeePreview(role){
+ const isFounder=role==='founder',p=isFounder?'founder':'manager';
+ const mm=isFounder?members:managerMembers,tt=isFounder?tiers:managerTiers;
+ const m=mm.find(x=>x.id===$(p+'FeeMember').value),t=tt.find(x=>x.id===m?.tier_id);
+ const box=$(p+'FeePreview');box.replaceChildren();
+ if(!m||!t){box.append(text('div','Choose a fictional member and a scenario.','small'));return;}
+ box.append(text('div','Sample membership fee: '+asMoney(t.annual_fee),'small'));
+ box.append(text('div','Scenario: '+($(p+'FeeKind').value==='renewal'?'Annual renewal':'New membership'),'small'));
+ if(isFounder){const commercial=terms.find(x=>x.lounge_id===m.lounge_id);if(commercial){const pct=Number($(p+'FeeKind').value==='renewal'?commercial.renewal_pct:commercial.new_membership_pct);box.append(text('div','Draft CIRCLE share: '+pct+'% = '+asMoney(Number(t.annual_fee)*pct/100),'small'));}else box.append(text('div','Save a draft commercial proposal for this lounge first.','small'));}
+ box.append(text('div','TEST ONLY — no charge, receipt, activation or commission earned.','help'));
+}
+function syncFeeSelectors(role){
+ const p=role==='founder'?'founder':'manager';
+ const ls=role==='founder'?lounges:managerLounges,mm=role==='founder'?members:managerMembers,tt=role==='founder'?tiers:managerTiers;
+ options(p+'FeeLounge',ls,'Select lounge',$(p+'FeeLounge').value);
+ fillDemoMemberOptions(p+'FeeLounge',p+'FeeMember',mm,tt);
+ updateFeePreview(role);
+}
+function renderFeeEvents(role){
+ const isFounder=role==='founder',source=isFounder?demoEvents:managerEvents;
+ const ms=isFounder?members:managerMembers,ls=isFounder?lounges:managerLounges;
+ const target=$(isFounder?'founderFeeHistory':'managerFeeHistory');target.replaceChildren();target.className='';
+ if(!source.length){target.append(text('div','No sample membership fee events yet.','empty'));return;}
+ for(const e of source){
+  const m=ms.find(x=>x.id===e.member_id),l=ls.find(x=>x.id===e.lounge_id);
+  const card=text('div','','item');const summary=text('div',(m?.member_name||'Member')+' · '+(e.event_kind==='new'?'New':'Renewal')+' · '+asMoney(e.fee_ngn),'small');
+  card.append(text('strong',l?.name||'Assigned lounge'),summary);
+  card.append(text('div',new Date(e.created_at).toLocaleString('en-NG',{dateStyle:'medium',timeStyle:'short'})+' · SAMPLE RECORD ONLY','meta'));
+  if(isFounder){const est=demoEstimates.find(x=>x.event_id===e.id);if(est)card.append(text('div','Estimated CIRCLE share '+est.proposed_pct+'%: '+asMoney(est.proposed_share_ngn)+' · Proposed lounge share: '+asMoney(est.proposed_venue_share_ngn),'listinner'));}
+  target.append(card);
+ }
+}
+function renderAllFeeUI(){
+ syncFeeSelectors('founder');renderFeeEvents('founder');
+ $('founderFeeTotal').textContent=asMoney(demoEvents.reduce((sum,e)=>sum+Number(e.fee_ngn||0),0));
+ $('founderShareTotal').textContent=asMoney(demoEstimates.reduce((sum,e)=>sum+Number(e.proposed_share_ngn||0),0));
+}
+function renderManagerFeeUI(){
+ hide('managerFeeCard',managerLounges.length===0);
+ syncFeeSelectors('manager');renderFeeEvents('manager');
+}
+function currentTerms(){return terms.find(t=>t.lounge_id===$('termsLounge').value)}
+function updateEdit(){const l=lounges.find(l=>l.id===$('editLounge').value);$('editName').value=l?.name||'';$('editCity').value=l?.city||'';$('editStatus').value=l?.status||'draft'}
+function updateRevenue(){const x=currentTerms();$('setupFee').value=x?.setup_fee_ngn??5000000;$('newPct').value=x?.new_membership_pct??20;$('renewPct').value=x?.renewal_pct??10;$('monthlyFee').value=x?.monthly_platform_fee_ngn??150000;$('termsNotes').value=x?.proposal_notes||'';tierOptions('forecastTier',tiers.filter(t=>t.lounge_id===$('termsLounge').value));forecast()}
+function num(id,min=0,max=1e12,integer=false){const v=Number($(id).value);if(!$(id).value.trim()||!Number.isFinite(v)||v<min||v>max||(integer&&!Number.isInteger(v)))throw Error('Enter a valid value for '+id+'.');return v}
+function forecast(){const t=tiers.find(t=>t.id===$('forecastTier').value);const get=id=>{const n=Number($(id).value);return Number.isFinite(n)&&n>=0?n:0};const sum=$('forecastSummary');if(!$('termsLounge').value){sum.textContent='Select a partner lounge first.';return}const price=Number(t?.annual_fee)||0;const setup=get('setupFee'),nr=price*get('newMembers')*get('newPct')/100,rr=price*get('renewals')*get('renewPct')/100,annual=get('monthlyFee')*12;sum.replaceChildren(text('div','Implementation: '+asMoney(setup),'small'),text('div','New-membership share: '+asMoney(nr),'small'),text('div','Renewal share: '+asMoney(rr),'small'),text('div','12 months of platform fees: '+asMoney(annual),'small'),text('h3','Illustrative total: '+asMoney(setup+nr+rr+annual)));}
+function draw(){
+ $('loungeCount').textContent=lounges.length;$('tierCount').textContent=tiers.length;$('termsCount').textContent=terms.length;$('membersCount').textContent=members.length;
+ const choices=['editLounge','tierLounge','termsLounge','assignLounge','founderMemberLounge'];for(const id of choices){const before=$(id).value;options(id,lounges,'Select lounge',before)}updateEdit();setMemberTiers('founderMemberLounge','founderMemberTier',tiers);renderMemberCards('founderMemberList',members,lounges,tiers);
+ const ol=$('overviewList');ol.replaceChildren();ol.className='';if(!lounges.length){ol.append(text('div','No lounges yet. Add a draft lounge under Lounges & tiers.','empty'))}for(const l of lounges){const box=text('div','', 'item'),head=text('div','', 'split');head.append(text('strong',l.name),text('span',l.status,'tag'));box.append(head);box.append(text('div',(l.city||'No city')+' · '+tiers.filter(t=>t.lounge_id===l.id).length+' membership tiers'+(terms.some(t=>t.lounge_id===l.id)?' · Revenue proposal saved':''),'meta'));ol.append(box)}
+ const tl=$('tierList');tl.replaceChildren();tl.className='';if(!tiers.length)tl.append(text('div','No membership tiers saved yet.','empty'));for(const l of lounges){const group=tiers.filter(t=>t.lounge_id===l.id);if(!group.length)continue;const box=text('div','', 'item');box.append(text('strong',l.name));for(const t of group)box.append(text('div',t.name+' · '+asMoney(t.annual_fee)+'/yr · Food '+t.food_discount+'% · Drinks '+t.drinks_discount+'% · Guests '+t.guest_limit,'listinner'));tl.append(box)}
+ const rl=$('termsList');rl.replaceChildren();rl.className='';if(!terms.length)rl.append(text('div','No proposals saved yet.','empty'));for(const t of terms){const l=lounges.find(l=>l.id===t.lounge_id);const box=text('div','', 'item');box.append(text('strong',l?.name||'Unrecognized lounge'));box.append(text('div','Setup '+asMoney(t.setup_fee_ngn)+' · New '+t.new_membership_pct+'% · Renewal '+t.renewal_pct+'% · Monthly '+asMoney(t.monthly_platform_fee_ngn),'meta'));box.append(text('div','PROPOSAL ONLY','tag'));rl.append(box)}
+ const al=$('assignmentList');al.replaceChildren();al.className='';
+ if(!assignments.length) al.append(text('div','No lounge account assignments yet.','empty'));
+ for(const a of assignments){const box=text('div','','item'), l=lounges.find(x=>x.id===a.lounge_id);const head=text('div','','split');head.append(text('strong', l?.name||'Unknown lounge'),text('span',a.role,'tag'));box.append(head,text('div','UID: '+a.user_id,'meta'));const rm=document.createElement('button');rm.type='button';rm.className='secondary';rm.textContent='Revoke assignment';rm.style.marginTop='10px';rm.addEventListener('click',()=>revokeAssignment(a));box.append(rm);al.append(box)}
+ updateRevenue();renderAllFeeUI();
+}
+async function fetchAll(){if(!sb||!founder)return;const [a,b,c,d,e,f,g]=await Promise.all([
+ sb.from('circle_lounges').select('id,name,city,status').order('name').limit(500),
+ sb.from('circle_membership_tiers').select('id,lounge_id,name,annual_fee,food_discount,drinks_discount,guest_limit').order('name').limit(1000),
+ sb.from('circle_partner_commercial_terms').select('lounge_id,setup_fee_ngn,new_membership_pct,renewal_pct,monthly_platform_fee_ngn,proposal_notes').limit(500),
+ sb.from('circle_lounge_staff').select('lounge_id,user_id,role').limit(2000),
+ sb.from('circle_members').select('id,lounge_id,tier_id,member_name,member_code,member_status,created_at').order('created_at',{ascending:false}).limit(1000),
+ sb.from('circle_demo_membership_events').select('id,member_id,lounge_id,tier_id,event_kind,fee_ngn,created_at').order('created_at',{ascending:false}).limit(1000),
+ sb.from('circle_demo_founder_estimates').select('event_id,lounge_id,proposed_pct,proposed_share_ngn,proposed_venue_share_ngn').limit(1000)
+]);for(const r of [a,b,c,d,e,f,g])if(r.error)throw Error(r.error.message);const keepTerms=$('termsLounge').value,keepTier=$('tierLounge').value,keepEdit=$('editLounge').value;lounges=a.data||[];tiers=b.data||[];terms=c.data||[];assignments=d.data||[];members=e.data||[];demoEvents=f.data||[];demoEstimates=g.data||[];draw();for(const [id,val] of [['termsLounge',keepTerms],['tierLounge',keepTier],['editLounge',keepEdit]])if([...$(id).options].some(o=>o.value===val))$(id).value=val;updateEdit();updateRevenue();await loadSpending('founder');say('CIRCLE data refreshed: '+lounges.length+' lounges, '+tiers.length+' tiers and '+terms.length+' proposal(s).')}
+async function loadManager(){
+ const [a,b,c,d]=await Promise.all([
+  sb.from('circle_lounges').select('id,name,city,status').order('name').limit(200),
+  sb.from('circle_membership_tiers').select('id,lounge_id,name,annual_fee,food_discount,drinks_discount,guest_limit').order('name').limit(500),
+  sb.from('circle_members').select('id,lounge_id,tier_id,member_name,member_code,member_status,created_at').order('created_at',{ascending:false}).limit(500),
+  sb.from('circle_demo_membership_events').select('id,member_id,lounge_id,tier_id,event_kind,fee_ngn,created_at').order('created_at',{ascending:false}).limit(1000)
+ ]);
+ if(a.error||b.error||c.error||d.error)throw Error((a.error||b.error||c.error||d.error).message);
+ // This is a negative access check: a lounge user must see NO Founder proposals.
+ const x=await sb.from('circle_partner_commercial_terms').select('lounge_id').limit(1);
+ if(!x.error && x.data?.length)throw Error('SECURITY ALERT: This account can see Founder commercial proposals. Contact CIRCLE HQ before continuing.');
+ const privateCheck=await sb.from('circle_demo_founder_estimates').select('event_id').limit(1);
+ if(!privateCheck.error && privateCheck.data?.length)throw Error('SECURITY ALERT: Lounge manager can see private Founder estimates. Stop testing.');
+ const ml=a.data||[],mt=b.data||[];managerLounges=ml;managerTiers=mt;managerMembers=c.data||[];managerEvents=d.data||[];renderManagerFeeUI();
+ hide('managerMemberCard',!ml.length);options('managerMemberLounge',ml,'Select assigned lounge',$('managerMemberLounge').value);setMemberTiers('managerMemberLounge','managerMemberTier',mt);renderMemberCards('managerMemberList',managerMembers,ml,mt);
+ $('managerLoungeCount').textContent=ml.length;$('managerTierCount').textContent=mt.length;
+ const e=$('managerLoungeList');e.replaceChildren();e.className='';
+ if(!ml.length){e.append(text('div','No lounge read access. Staff-only users do not yet have a transaction workspace.','empty'));}
+ for(const l of ml){const box=text('div','','item');box.append(text('h3',l.name),text('div',(l.city||'City not specified')+' · '+l.status,'meta'));for(const t of mt.filter(t=>t.lounge_id===l.id)){box.append(text('div',t.name+' — '+asMoney(t.annual_fee)+'/year · Food '+t.food_discount+'% · Drinks '+t.drinks_discount+'% · Guests '+t.guest_limit,'listinner'))}e.append(box)}
+ await loadSpending('manager');say('Restricted lounge workspace loaded: '+ml.length+' lounge(s), '+mt.length+' package(s).');
+}
+async function verify(user){
+ const {data,error}=await sb.from('circle_founders').select('user_id').eq('user_id',user.id).limit(1);
+ if(error)throw Error('Founder verification failed: '+error.message);
+ founder=!!data?.length;hide('loginPanel',true);
+ if(founder){hide('deniedPanel',true);hide('managerPanel',true);hide('appPanel',false);setTabs('overview');await fetchAll();return}
+ const r=await sb.from('circle_lounge_staff').select('lounge_id,role').eq('user_id',user.id);
+ if(r.error)throw Error('Lounge assignment check failed: '+r.error.message);
+ const assigned=r.data||[];
+ hide('appPanel',true);hide('managerPanel',!assigned.length);hide('deniedPanel',!!assigned.length);
+ if(!assigned.length){say('Access denied: no assigned CIRCLE lounge.',true);return}
+ hide('staffOnlyNotice',!assigned.some(a=>a.role==='staff'));
+ await loadManager();
+}
+async function revokeAssignment(a){
+ if(!confirm('Revoke '+a.role+' access for '+a.user_id+'?'))return;
+ const {error}=await sb.from('circle_lounge_staff').delete().eq('lounge_id',a.lounge_id).eq('user_id',a.user_id);
+ if(error){say('Could not revoke: '+err(error),true);return}await fetchAll();say('Lounge assignment revoked.');
+}
+async function connect(url,key){if(!isUrl(url))throw Error('Invalid Supabase project URL.');if(!/^sb_publishable_[\w-]+$/.test(key.trim()))throw Error('Enter your sb_publishable_ key, not a secret key.');if(!window.supabase?.createClient)throw Error('Could not load Supabase JS. Check your internet connection.');sb=window.supabase.createClient(url.trim(),key.trim(),{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});const cfg=JSON.stringify({url:url.trim(),key:key.trim()});localStorage.setItem('circle_v5_public_config',cfg);localStorage.setItem('circle_v4_public_config',cfg);localStorage.setItem('circle_hq_v3_public_config',cfg);hide('connectionPanel',true);hide('deniedPanel',true);hide('appPanel',true);hide('managerPanel',true);hide('loginPanel',false);say('Connected to CIRCLE. Sign in using your Founder or assigned lounge account.');const {data,error}=await sb.auth.getUser();if(!error&&data?.user)await verify(data.user)}
+async function signout(){await sb?.auth.signOut();founder=false;hide('appPanel',true);hide('managerPanel',true);hide('deniedPanel',true);hide('loginPanel',false);$('password').value='';say('Signed out of CIRCLE.')}
+$('connectButton').addEventListener('click',async()=>{const b=$('connectButton');b.disabled=true;try{await connect($('projectUrl').value,$('projectKey').value)}catch(e){say(err(e),true)}finally{b.disabled=false}});
+$('loginForm').addEventListener('submit',async e=>{e.preventDefault();const b=$('signInButton');b.disabled=true;try{const {data,error}=await sb.auth.signInWithPassword({email:$('email').value.trim(),password:$('password').value});$('password').value='';if(error)throw error;await verify(data.user)}catch(x){$('password').value='';say(err(x),true)}finally{b.disabled=false}});
+$('assignmentForm').addEventListener('submit',async e=>{
+ e.preventDefault();const b=$('assignButton');b.disabled=true;
+ try{const lounge_id=$('assignLounge').value,user_id=$('assignUser').value.trim().toLowerCase(),role=$('assignRole').value;
+ if(!lounges.some(l=>l.id===lounge_id))throw Error('Select a valid partner lounge.');
+ if(!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/.test(user_id))throw Error('Paste a valid Supabase Auth user UID.');
+ if(!['manager','staff'].includes(role))throw Error('Invalid role.');
+ const {error}=await sb.from('circle_lounge_staff').insert({lounge_id,user_id,role});
+ if(error)throw error;
+ $('assignmentForm').reset();await fetchAll();say('Lounge user assigned. Ask them to sign in using their own credentials.');
+ }catch(x){say('Could not assign user: '+err(x),true)}finally{b.disabled=false}
+});
+$('managerOut').addEventListener('click',signout);
+$('managerRefresh').addEventListener('click',async()=>{try{await loadManager()}catch(e){say('Refresh failed: '+err(e),true)}});
+$('signOut').addEventListener('click',signout);$('deniedOut').addEventListener('click',signout);
+$('resetConnection').addEventListener('click',async()=>{await sb?.auth.signOut();founder=false;sb=null;localStorage.removeItem('circle_v5_public_config');localStorage.removeItem('circle_v4_public_config');localStorage.removeItem('circle_hq_v3_public_config');hide('loginPanel',true);hide('appPanel',true);hide('managerPanel',true);hide('deniedPanel',true);hide('connectionPanel',false);$('projectKey').value='';say('Connection cleared.')});
+$('refreshButton').addEventListener('click',async()=>{try{await fetchAll()}catch(e){say('Refresh failed: '+err(e),true)}});
+$('editLounge').addEventListener('change',updateEdit);$('termsLounge').addEventListener('change',updateRevenue);$('forecastTier').addEventListener('change',forecast);
+for(const id of ['setupFee','newPct','renewPct','monthlyFee','newMembers','renewals'])$(id).addEventListener('input',forecast);
+$('loungeForm').addEventListener('submit',async e=>{e.preventDefault();const b=$('addLounge');b.disabled=true;try{const name=$('loungeName').value.trim(),city=$('loungeCity').value.trim();if(!name||!city)throw Error('Enter name and city.');const {error}=await sb.from('circle_lounges').insert({name,city,status:'draft'});if(error)throw error;await fetchAll();$('loungeForm').reset();say('Draft lounge created: '+name)}catch(e){say('Could not create lounge: '+err(e),true)}finally{b.disabled=false}});
+$('editForm').addEventListener('submit',async e=>{e.preventDefault();const b=$('updateLounge');b.disabled=true;try{const id=$('editLounge').value,name=$('editName').value.trim(),city=$('editCity').value.trim(),status=$('editStatus').value;if(!lounges.some(l=>l.id===id)||!name||!city)throw Error('Select a lounge and enter its details.');const {error}=await sb.from('circle_lounges').update({name,city,status}).eq('id',id);if(error)throw error;await fetchAll();$('editLounge').value=id;updateEdit();say('Lounge updated: '+name)}catch(e){say('Could not update lounge: '+err(e),true)}finally{b.disabled=false}});
+$('tierForm').addEventListener('submit',async e=>{e.preventDefault();const b=$('addTier');b.disabled=true;try{const lounge_id=$('tierLounge').value,name=$('tierName').value.trim();if(!lounges.some(l=>l.id===lounge_id)||!name)throw Error('Select a lounge and name the tier.');const payload={lounge_id,name,annual_fee:num('annualFee'),food_discount:num('foodDiscount',0,100),drinks_discount:num('drinksDiscount',0,100),guest_limit:num('guestLimit',0,1e9,true)};const {error}=await sb.from('circle_membership_tiers').insert(payload);if(error)throw error;await fetchAll();$('tierForm').reset();$('tierLounge').value=lounge_id;say('Membership package created: '+name)}catch(e){say('Could not create tier: '+err(e),true)}finally{b.disabled=false}});
+$('termsForm').addEventListener('submit',async e=>{e.preventDefault();const b=$('saveTerms');b.disabled=true;try{const lounge_id=$('termsLounge').value;if(!lounges.some(l=>l.id===lounge_id))throw Error('Select a lounge first.');const payload={lounge_id,setup_fee_ngn:num('setupFee'),new_membership_pct:num('newPct',0,100),renewal_pct:num('renewPct',0,100),monthly_platform_fee_ngn:num('monthlyFee'),proposal_notes:$('termsNotes').value.trim(),commission_basis:'membership_fee_only',updated_at:new Date().toISOString()};const {error}=await sb.from('circle_partner_commercial_terms').upsert(payload,{onConflict:'lounge_id'});if(error)throw error;await fetchAll();$('termsLounge').value=lounge_id;updateRevenue();say('Proposal saved for '+(lounges.find(l=>l.id===lounge_id)?.name||'lounge')+'. No payments collected.') }catch(e){say('Could not save proposal: '+err(e),true)}finally{b.disabled=false}});
+
+async function saveDemoMember(role){
+ const founderFlow=role==='founder';
+ const nameId=founderFlow?'founderMemberName':'managerMemberName';
+ const loungeId=founderFlow?'founderMemberLounge':'managerMemberLounge';
+ const tierId=founderFlow?'founderMemberTier':'managerMemberTier';
+ const selectedLounge=$(loungeId).value,selectedTier=$(tierId).value, nickname=$(nameId).value.trim();
+ const visibleLounges=founderFlow?lounges:managerLounges,visibleTiers=founderFlow?tiers:managerTiers;
+ if(nickname.length<2||nickname.length>80)throw Error('Use a fictional nickname of 2–80 characters.');
+ if(!visibleLounges.some(l=>l.id===selectedLounge))throw Error('Choose a lounge accessible to this account.');
+ if(!visibleTiers.some(t=>t.id===selectedTier&&t.lounge_id===selectedLounge))throw Error('Choose a tier belonging to this lounge.');
+ const {error}=await sb.from('circle_members').insert({lounge_id:selectedLounge,tier_id:selectedTier,member_name:nickname});
+ if(error)throw error;
+ $(nameId).value='';
+ if(founderFlow){await fetchAll();setTabs('members')}else await loadManager();
+ say('Demo member registered as PENDING. Card code is a display identifier only. No payment was taken.');
+}
+for(const [formId,btnId,role] of [['founderMemberForm','founderAddMember','founder'],['managerMemberForm','managerAddMember','manager']]){
+ $(formId).addEventListener('submit',async e=>{e.preventDefault();const b=$(btnId);b.disabled=true;try{await saveDemoMember(role)}catch(x){say('Member registration failed: '+err(x),true)}finally{b.disabled=false}});
+}
+$('founderMemberLounge').addEventListener('change',()=>setMemberTiers('founderMemberLounge','founderMemberTier',tiers));
+$('managerMemberLounge').addEventListener('change',()=>setMemberTiers('managerMemberLounge','managerMemberTier',managerTiers));
+
+
+for(const role of ['founder','manager']){
+ const p=role==='founder'?'founder':'manager';
+ $(p+'FeeLounge').addEventListener('change',()=>{fillDemoMemberOptions(p+'FeeLounge',p+'FeeMember',role==='founder'?members:managerMembers,role==='founder'?tiers:managerTiers);updateFeePreview(role)});
+ $(p+'FeeMember').addEventListener('change',()=>updateFeePreview(role));
+ $(p+'FeeKind').addEventListener('change',()=>updateFeePreview(role));
+ $(p+'DemoFeeForm').addEventListener('submit',async e=>{
+  e.preventDefault();const b=$(p+'DemoFeeSave');b.disabled=true;
+  try{
+   const member_id=$(p+'FeeMember').value,event_kind=$(p+'FeeKind').value;
+   const ms=role==='founder'?members:managerMembers;
+   if(!ms.some(m=>m.id===member_id&&m.lounge_id===$(p+'FeeLounge').value))throw Error('Choose a member from an authorized lounge.');
+   if(!['new','renewal'].includes(event_kind))throw Error('Invalid simulation type.');
+   if(!window.crypto?.randomUUID)throw Error('Open CIRCLE over HTTPS to generate a safe request ID.');
+   const request_key=window.crypto.randomUUID();
+   const {data,error}=await sb.rpc('circle_record_demo_membership_event',{p_member_id:member_id,p_event_kind:event_kind,p_request_key:request_key});
+   if(error)throw error;
+   if(role==='founder')await fetchAll();else await loadManager();
+   say('Sample '+event_kind+' event saved ('+String(data).slice(0,8)+'). No payment, activation or actual commission occurred.');
+  }catch(x){say('Could not record demo event: '+err(x),true)}finally{b.disabled=false}
+ });
+}
+
+
+// --- VERSION 8: demonstration-only credit ledger & guest authorization ---
+const koboMoney=k=>asMoney(Number(k||0)/100);
+function v8Source(role){return role==='founder'?{ls:lounges,ms:members,ts:tiers}:{ls:managerLounges,ms:managerMembers,ts:managerTiers}}
+function v8Data(role){return role==='founder'?v8FounderData:v8ManagerData}
+function v8SetData(role,data){if(role==='founder')v8FounderData=data;else v8ManagerData=data}
+async function loadSpending(role){
+ const [a,b,c,d]=await Promise.all([
+  sb.from('circle_demo_menu_items').select('id,lounge_id,name,category,price_kobo,active').order('created_at',{ascending:false}).limit(2000),
+  sb.from('circle_demo_accounts').select('member_id,lounge_id,balance_kobo').limit(2000),
+  sb.from('circle_demo_guest_passes').select('id,member_id,lounge_id,guest_code,limit_kobo,spent_kobo,expires_at,used_at').order('created_at',{ascending:false}).limit(200),
+  sb.from('circle_demo_spending_ledger').select('id,member_id,lounge_id,entry_kind,delta_kobo,resulting_balance_kobo,menu_item_id,quantity,discount_pct,created_at').order('created_at',{ascending:false}).limit(1000)
+ ]);
+ for(const r of [a,b,c,d])if(r.error)throw Error('V8 database read: '+r.error.message);
+ v8SetData(role,{menu:a.data||[],accounts:b.data||[],passes:c.data||[],ledger:d.data||[]});
+ renderSpending(role);
+}
+function renderSpending(role){
+ const p=role==='founder'?'founder':'manager',s=v8Source(role),d=v8Data(role);
+ if(!d)return;
+ if(role==='manager')hide('managerSpendCard',s.ls.length===0);
+ const loungeId=$(p+'SpendLounge').value,memberId=$(p+'SpendMember').value;
+ options(p+'SpendLounge',s.ls,'Choose a lounge',loungeId);
+ const lounge=$(p+'SpendLounge').value,mems=s.ms.filter(m=>m.lounge_id===lounge);
+ const sel=$(p+'SpendMember');sel.replaceChildren(new Option('Choose a fictional member',''));
+ for(const m of mems)sel.add(new Option(m.member_name+' · '+m.member_code,m.id));
+ if(mems.some(m=>m.id===memberId))sel.value=memberId;
+ const visibleMenu=d.menu.filter(m=>m.lounge_id===lounge&&m.active);
+ const itemSelect=$(p+'CheckoutItem'),prevItem=itemSelect.value;
+ itemSelect.replaceChildren(new Option('Choose a menu item',''));
+ for(const item of visibleMenu)itemSelect.add(new Option(item.name+' · '+koboMoney(item.price_kobo)+' · '+item.category,item.id));
+ if(visibleMenu.some(m=>m.id===prevItem))itemSelect.value=prevItem;
+ renderSpendingSummary(role);
+}
+function renderSpendingSummary(role){
+ const p=role==='founder'?'founder':'manager',s=v8Source(role),d=v8Data(role);if(!d)return;
+ const memberId=$(p+'SpendMember').value,loungeId=$(p+'SpendLounge').value;
+ const acc=d.accounts.find(a=>a.member_id===memberId);
+ $(p+'SpendBalance').textContent=koboMoney(acc?.balance_kobo||0);
+ const member=s.ms.find(m=>m.id===memberId),tier=s.ts.find(t=>t.id===member?.tier_id);
+ const item=d.menu.find(m=>m.id===$(p+'CheckoutItem').value&&m.lounge_id===loungeId);
+ const box=$(p+'CheckoutPreview');box.replaceChildren();
+ if(!item||!member||!tier){box.append(text('div','Select a fictional member and menu item to preview the discount.','small'));}
+ else {
+  const q=Number($(p+'CheckoutQty').value)||1;
+  const dis=Number(item.category==='food'?tier.food_discount:item.category==='drinks'?tier.drinks_discount:0);
+  const price=Number(item.price_kobo)*q,net=Math.round(price*(100-dis)/100);
+  box.append(text('div','List price: '+koboMoney(price),'small'),text('div','Eligible '+item.category+' discount: '+dis+'%','small'),text('strong','Demo payable: '+koboMoney(net)));
+ }
+ const history=$(p+'SpendLedger');history.replaceChildren();history.className='';
+ const rows=d.ledger.filter(e=>e.lounge_id===loungeId&&(!memberId||e.member_id===memberId)).slice(0,30);
+ if(!rows.length){history.append(text('div','No simulated transactions for the selected lounge/member.','empty'));return}
+ for(const e of rows){const m=s.ms.find(x=>x.id===e.member_id),i=d.menu.find(x=>x.id===e.menu_item_id),v=text('div','','item');
+  v.append(text('strong',(e.entry_kind==='demo_topup'?'Test credit':e.entry_kind==='guest_purchase'?'Guest purchase':'Member purchase')+' · '+(e.delta_kobo>0?'+':'')+koboMoney(e.delta_kobo)),
+   text('div',(m?.member_name||'Fictional member')+(i?' · '+i.name+' × '+e.quantity+' · '+e.discount_pct+'% off':'')+' · Balance '+koboMoney(e.resulting_balance_kobo),'meta'),
+   text('div',new Date(e.created_at).toLocaleString('en-NG',{dateStyle:'medium',timeStyle:'short'})+' · SIMULATION ONLY','meta'));history.append(v);
+ }
+}
+async function v8Busy(button,work){const b=$(button);b.disabled=true;try{await work()}catch(x){say('Demo operation failed: '+err(x),true)}finally{b.disabled=false}}
+for(const p of ['founder','manager']){
+ const role=p;
+ $(p+'SpendLounge').addEventListener('change',()=>renderSpending(p));
+ $(p+'SpendMember').addEventListener('change',()=>{renderSpendingSummary(p);$(p+'GuestOutput').classList.add('hide')});
+ $(p+'CheckoutItem').addEventListener('change',()=>renderSpendingSummary(p));
+ $(p+'CheckoutQty').addEventListener('input',()=>renderSpendingSummary(p));
+ $(p+'MenuForm').addEventListener('submit',e=>{e.preventDefault();v8Busy(p+'MenuButton',async()=>{
+  const lounge_id=$(p+'SpendLounge').value,name=$(p+'MenuName').value.trim(),price=Number($(p+'MenuPrice').value),category=$(p+'MenuCategory').value;
+  if(!v8Source(p).ls.some(l=>l.id===lounge_id)||name.length<2||!Number.isInteger(price)||price<1||price>100000000||!['food','drinks','other'].includes(category))throw Error('Choose lounge, fictional menu item, category and positive whole-Naira price.');
+  const {error}=await sb.from('circle_demo_menu_items').insert({lounge_id,name,category,price_kobo:price*100});if(error)throw error;
+  $(p+'MenuName').value='';$(p+'MenuPrice').value='';await loadSpending(p);say('Fictional menu item saved for this lounge.');
+ })});
+ $(p+'TopupForm').addEventListener('submit',e=>{e.preventDefault();v8Busy(p+'TopupButton',async()=>{
+  const p_member_id=$(p+'SpendMember').value,p_amount_ngn=Number($(p+'TopupNgn').value);
+  if(!v8Source(p).ms.some(m=>m.id===p_member_id)||!Number.isInteger(p_amount_ngn)||p_amount_ngn<1||p_amount_ngn>10000000)throw Error('Choose a fictional member and a valid whole-Naira amount.');
+  const {data,error}=await sb.rpc('circle_v8_demo_topup',{p_member_id,p_amount_ngn,p_request_key:crypto.randomUUID()});if(error)throw error;
+  await loadSpending(p);say('Demo-only credit recorded. New pretend balance: '+koboMoney(data.balance_kobo)+'. Not real funds.');
+ })});
+ $(p+'GuestForm').addEventListener('submit',e=>{e.preventDefault();v8Busy(p+'GuestButton',async()=>{
+  const p_member_id=$(p+'SpendMember').value,p_limit_ngn=Number($(p+'GuestLimit').value),p_hours=Number($(p+'GuestHours').value);
+  if(!v8Source(p).ms.some(m=>m.id===p_member_id)||!Number.isInteger(p_limit_ngn)||p_limit_ngn<1||p_limit_ngn>10000000||!Number.isInteger(p_hours)||p_hours<1||p_hours>24)throw Error('Choose member, valid allowance and expiry.');
+  const {data,error}=await sb.rpc('circle_v8_demo_issue_pass',{p_member_id,p_limit_ngn,p_hours,p_request_key:crypto.randomUUID()});if(error)throw error;
+  const output=$(p+'GuestOutput');output.textContent='SINGLE-USE DEMO CODE: '+data.guest_code+' | expires '+new Date(data.expires_at).toLocaleString('en-NG');output.classList.remove('hide');
+  await loadSpending(p);say('Single-use guest simulation pass created. Code has no real spending value.');
+ })});
+ $(p+'CheckoutForm').addEventListener('submit',e=>{e.preventDefault();v8Busy(p+'CheckoutButton',async()=>{
+  const p_member_id=$(p+'SpendMember').value,p_menu_item_id=$(p+'CheckoutItem').value,p_quantity=Number($(p+'CheckoutQty').value),p_guest_code=$(p+'CheckoutGuest').value.trim()||null;
+  if(!v8Source(p).ms.some(m=>m.id===p_member_id)||!v8Data(p)?.menu.some(i=>i.id===p_menu_item_id)||!Number.isInteger(p_quantity)||p_quantity<1||p_quantity>20)throw Error('Choose a fictional member, menu item and quantity.');
+  const {data,error}=await sb.rpc('circle_v8_demo_checkout',{p_member_id,p_menu_item_id,p_quantity,p_guest_code,p_request_key:crypto.randomUUID()});if(error)throw error;
+  $(p+'CheckoutGuest').value='';await loadSpending(p);
+  say('Recorded '+(p_guest_code?'guest':'member')+' demo purchase: '+koboMoney(data.charged_kobo)+' after '+data.discount_pct+'% discount. Pretend balance: '+koboMoney(data.balance_kobo)+'.');
+ })});
+}
+
+try{const cfg=JSON.parse(localStorage.getItem('circle_v5_public_config')||localStorage.getItem('circle_v4_public_config')||localStorage.getItem('circle_hq_v3_public_config')||localStorage.getItem('circle_login_test_public_config')||'null');if(cfg?.url&&cfg?.key){$('projectUrl').value=cfg.url;$('projectKey').value=cfg.key;connect(cfg.url,cfg.key).catch(e=>{hide('connectionPanel',false);hide('loginPanel',true);say('Could not reconnect automatically: '+err(e),true)})}}catch{say('Enter the CIRCLE project URL and publishable key one time to connect.')}
+})();
+</script>
+</body></html>
