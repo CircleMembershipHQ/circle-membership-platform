@@ -82,11 +82,18 @@ h1{font-size:clamp(33px,5vw,55px);line-height:1.1;letter-spacing:-1.5px;font-wei
 <script src="https://cdn.jsdelivr.net/npm/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
 </head>
 <body><main>
-<header><div class="mark">C</div><div><div class="brand">CIRCLE</div><div class="sub">ONE MEMBERSHIP OS · LIVE APPROVALS · VERSION 17</div></div></header>
+<header><div class="mark">C</div><div><div class="brand">CIRCLE</div><div class="sub">ONE MEMBERSHIP OS · LIVE WALLET & APPROVALS · VERSION 17.1</div></div></header>
 <section style="padding:24px 0 4px"><div class="eyebrow">One home. Every private circle.</div><h1>Everything connected.<br>Everyone in their place.</h1><p class="lead">One login that opens the right workspace for CIRCLE founders, lounge managers, staff and members.</p></section>
 <div class="warning"><strong>DEVELOPMENT ENVIRONMENT · FICTIONAL DATA ONLY.</strong> Member cards, payment records, credit, discounts and guest passes remain demonstrations. No live payment collection, real fund custody, paid-membership activation or verified customer identity is enabled. Do not enter real member data or financial credentials.</div>
 <section class="card" id="connectionPanel"><div class="eyebrow">01 / Connection</div><h2>Connect CIRCLE</h2><p class="muted">Your existing public project URL and publishable key should be reused automatically from earlier CIRCLE versions in this browser.</p><form id="connectionForm"><div class="field"><label for="projectUrl">Supabase Project URL</label><input id="projectUrl" type="url" placeholder="https://your-project.supabase.co" required autocomplete="off"></div><div class="field"><label for="projectKey">Publishable API key (sb_publishable_...)</label><input id="projectKey" spellcheck="false" placeholder="sb_publishable_..." autocomplete="off" required></div><button>Connect existing project</button><p class="hint">Never enter an sb_secret_ key, service_role key or database password.</p></form></section>
-<section class="card hidden" id="loginPanel"><div class="eyebrow">02 / Authentication</div><h2>Sign in once</h2><p class="muted">Use your existing CIRCLE Founder, Manager, Staff or Member demonstration login.</p><form id="loginForm"><div class="field"><label for="loginEmail">Email</label><input id="loginEmail" type="email" autocomplete="username" required></div><div class="field"><label for="loginPassword">Password</label><input id="loginPassword" type="password" autocomplete="current-password" required></div><div class="row"><button id="loginButton">Sign in</button><button type="button" class="secondary" id="changeConnection">Change connection</button></div></form></section>
+<section class="card hidden" id="loginPanel"><div class="eyebrow">02 / Authentication</div><h2>Sign in once</h2><p class="muted">Use your existing CIRCLE Founder, Manager, Staff or Member demonstration login.</p><form id="loginForm"><div class="field"><label for="loginEmail">Email</label><input id="loginEmail" type="email" autocomplete="username" required></div><div class="field"><label for="loginPassword">Password</label><input id="loginPassword" type="password" autocomplete="current-password" required></div><div class="row"><button id="loginButton">Sign in</button><button type="button" class="secondary" id="forgotPassword">Forgot password?</button><button type="button" class="secondary" id="changeConnection">Change connection</button></div></form></section>
+<section class="card hidden" id="recoveryPanel">
+  <h2>Set new password</h2>
+  <form id="recoveryForm">
+    <div class="field"><label for="newPassword">New password</label><input id="newPassword" type="password" autocomplete="new-password" minlength="6" required></div>
+    <button id="savePassword">Save new password</button>
+  </form>
+</section>
 <section id="appPanel" class="hidden">
 <div class="card" style="padding:15px 19px"><div class="row" style="justify-content:space-between"><div class="row"><span class="badge" id="roleBadge">Authenticated</span><span id="roleCaption" class="muted"></span></div><div class="row"><button class="secondary" id="refreshButton">Refresh data</button><button class="secondary" id="signOutButton">Sign out</button></div></div></div>
 <nav class="tabs" id="tabs" aria-label="Workspace sections"></nav>
@@ -128,7 +135,7 @@ h1{font-size:clamp(33px,5vw,55px);line-height:1.1;letter-spacing:-1.5px;font-wei
 <p class="hint">The QR encodes only the member's card reference; lounge staff verification still checks server-side lounge permissions. A QR, card number or screenshot cannot authorize an actual purchase. No NFC feature or real payment processing is implemented.</p></div>
 </section>
 <section id="tab-guest" class="worktab hidden">
-<div class="eyebrow">Member self-service · Version 17</div><h2>My guest authorizations</h2>
+<div class="eyebrow">Member self-service · Version 17.1</div><h2>My guest authorizations</h2>
 <p class="muted">Create, share and revoke one-time demonstration spending permissions. A pass does not reserve funds and does not grant access to your member account.</p>
 <div class="grid wideleft"><div class="card"><h3>Create a one-time guest pass</h3>
 <form id="guestForm">
@@ -149,7 +156,7 @@ h1{font-size:clamp(33px,5vw,55px);line-height:1.1;letter-spacing:-1.5px;font-wei
 <div class="field pass-filter"><label for="passFilter">Show passes</label><select id="passFilter"><option value="ALL">All passes</option><option value="ACTIVE">Active</option><option value="USED">Used</option><option value="CANCELLED">Cancelled</option><option value="EXPIRED">Expired</option></select></div>
 <div id="guestList" class="scrollable"></div></div></div></section>
 <section id="tab-security" class="worktab hidden">
-<div class="eyebrow">Member-only · Version 17</div><h2>Wallet security & purchase approvals</h2>
+<div class="eyebrow">Member-only · Version 17.1</div><h2>Wallet security & purchase approvals</h2>
 <div class="security-alert">FICTIONAL CREDIT ONLY. Your membership QR identifies you; it must not authorize spending. When locked, your demo balance cannot be spent. Locking also cancels unused guest passes and pending approvals.</div>
 <div class="card"><div class="card-title"><h3>My demo wallet</h3><span id="walletBadge" class="badge">Loading…</span></div>
 <p id="walletSummary" class="muted">Checking member security state…</p>
@@ -181,7 +188,7 @@ const uidRx=/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i,co
 let securityState=null,db=null,role='',me=null,venues=[],tiers=[],members=[],terms=[],assignments=[],memberLinks=[],feeEvents=[],feeEstimates=[],demoMenu=[],demoAccounts=[],demoLedger=[],memberLink=null,memberRecord=null,staffVenues=[],staffMenu=[],verified=null,scanner=null,cameraRunning=false,lock=false,checkoutKey=null,selectedTab='',checkoutCompleted=false,liveBusy=false,liveMemberStamp='',liveStaffStamp='';
 const allowed={founder:['overview','lounges','revenue','access','members','fees','spending','audit'],manager:['overview','members','fees','spending'],staff:['verify'],member:['card','security','guest','history']};
 const labels={security:'My security',audit:'Security audit',overview:'Overview',lounges:'Lounges & tiers',revenue:'Revenue proposals',access:'Accounts & access',members:'Members & cards',fees:'Fee scenarios',spending:'Demo spending',verify:'Staff checkout & QR',card:'My membership card',guest:'My guest passes',history:'My transactions'};
-function panel(id){for(const name of ['connectionPanel','loginPanel','appPanel'])hidden(name,name!==id)}
+function panel(id){for(const name of ['connectionPanel','loginPanel','recoveryPanel','appPanel'])hidden(name,name!==id)}
 function selectTab(name){if(!allowed[role]?.includes(name))return;selectedTab=name;for(const p of document.querySelectorAll('.worktab'))p.classList.toggle('hidden',p.id!=='tab-'+name);for(const b of $('tabs').querySelectorAll('button'))b.setAttribute('aria-selected',String(b.dataset.tab===name));setTimeout(pollLive,400);}
 function paintTabs(){const target=$('tabs');target.replaceChildren();for(const name of allowed[role]||[]){const b=h('button',labels[name]);b.type='button';b.dataset.tab=name;b.addEventListener('click',()=>selectTab(name));target.append(b)}selectTab(allowed[role][0]);}
 function clearPersonal(){venues=[];tiers=[];members=[];terms=[];assignments=[];memberLinks=[];feeEvents=[];feeEstimates=[];demoMenu=[];demoAccounts=[];demoLedger=[];memberLink=null;memberRecord=null;securityState=null;staffVenues=[];staffMenu=[];verified=null;checkoutKey=null;checkoutCompleted=false;liveMemberStamp='';liveStaffStamp='';hidden('issuedCode',true);$('issuedCode').replaceChildren();$('guestForm').reset();}
@@ -189,7 +196,29 @@ async function q(table,columns='*',limit=1000){const r=await db.from(table).sele
 async function rpc(fn,args={}){const r=await db.rpc(fn,args);if(r.error)throw r.error;return r.data}
 function savedConfig(){for(const k of ['circle_v17_public_config','circle_v16_public_config','circle_v15_public_config','circle_v14_public_config','circle_v13_public_config','circle_v5_public_config','circle_v4_public_config','circle_hq_v3_public_config','circle_login_test_public_config']){try{const c=JSON.parse(localStorage.getItem(k)||'null');if(c?.url&&c?.key)return c}catch{}}return null}
 function remember(url,key){for(const k of ['circle_v17_public_config','circle_v16_public_config','circle_v15_public_config','circle_v14_public_config','circle_v13_public_config','circle_v5_public_config','circle_v4_public_config'])localStorage.setItem(k,JSON.stringify({url,key}))}
-async function connect(url,key){const u=new URL(url);if(u.protocol!=='https:'||!/^[a-z0-9-]+\.supabase\.co$/i.test(u.hostname))throw Error('Use your CIRCLE HTTPS Supabase project URL');if(!/^sb_publishable_[\w-]+$/.test(key))throw Error('Use only an sb_publishable_ API key');if(!window.supabase?.createClient)throw Error('Supabase library unavailable; check your internet connection');db=window.supabase.createClient(u.origin,key,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});remember(u.origin,key);panel('loginPanel');const r=await db.auth.getUser();if(r.data?.user&&!r.error)await resolve(r.data.user);else status('Connected. Use any previously created CIRCLE test login.');}
+const recoveryHash = new URLSearchParams(location.hash.slice(1));
+const recoveryQuery = new URLSearchParams(location.search);
+const recoveryRequested = recoveryHash.get('type') === 'recovery' ||
+  recoveryQuery.has('recover') || recoveryHash.has('error_code');
+let recoveryUserId = '';
+let recoverySubscription;
+
+async function connect(url,key){const u=new URL(url);if(u.protocol!=='https:'||!/^[a-z0-9-]+\.supabase\.co$/i.test(u.hostname))throw Error('Use your CIRCLE HTTPS Supabase project URL');if(!/^sb_publishable_[\w-]+$/.test(key))throw Error('Use only an sb_publishable_ API key');if(!window.supabase?.createClient)throw Error('Supabase library unavailable; check your internet connection');db=window.supabase.createClient(u.origin,key,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});remember(u.origin,key);
+recoverySubscription?.unsubscribe();
+recoverySubscription = db.auth.onAuthStateChange((event, session) => {
+  if (event !== 'PASSWORD_RECOVERY' || !session?.user) return;
+  recoveryUserId = session.user.id;
+  panel('recoveryPanel');
+  status('Enter a new password for ' + (session.user.email || 'your CIRCLE account') + '.');
+}).data.subscription;
+panel('loginPanel');
+await db.auth.getSession();
+if (recoveryUserId) return;
+if (recoveryRequested) {
+  status('If the password form does not appear, enter your email and select Forgot password? for a fresh link.');
+  return;
+}
+const r=await db.auth.getUser();if(r.data?.user&&!r.error)await resolve(r.data.user);else status('Connected. Use any previously created CIRCLE test login.');}
 async function resolve(user){await stopCamera();clearPersonal();me=user;const found=await db.from('circle_founders').select('user_id').eq('user_id',user.id).limit(1);if(found.error)throw found.error;
  if(found.data?.length)role='founder';else{const link=await db.from('circle_v9_member_logins').select('member_id,lounge_id').eq('user_id',user.id).maybeSingle();if(link.error)throw link.error;if(link.data){role='member';memberLink=link.data}else{const r=await db.from('circle_lounge_staff').select('lounge_id,role').eq('user_id',user.id).limit(100);if(r.error)throw r.error;const rows=r.data||[];role=rows.some(a=>a.role==='manager')?'manager':rows.some(a=>a.role==='staff')?'staff':''}}
  if(!role){panel('loginPanel');status('No CIRCLE Founder, Manager, Staff or Member assignment for this account.',true);return}
@@ -328,6 +357,32 @@ async function scanFile(file){if(!file)return;if(!$('staffVenue').value)throw Er
 async function startCamera(){if(!$('staffVenue').value)throw Error('Select your assigned lounge');if(typeof Html5Qrcode==='undefined')throw Error('Scanner library unavailable');await stopCamera();hidden('qrReader',false);scanner=new Html5Qrcode('qrReader',{formatsToSupport:[Html5QrcodeSupportedFormats.QR_CODE]});try{await scanner.start({facingMode:'environment'},{fps:8,qrbox:230},async code=>{await stopCamera();$('staffCode').value=code;verifyStaff().catch(e=>status(err(e),true))},()=>{});cameraRunning=true;status('Scanning. Aim camera at a separate device.')}catch(e){await stopCamera();throw e}}
 // Connect / login / sign-out
 $('connectionForm').addEventListener('submit',e=>{e.preventDefault();perform(e.submitter,()=>connect($('projectUrl').value.trim(),$('projectKey').value.trim()))});
+$('forgotPassword').addEventListener('click', e => perform(e.currentTarget, async () => {
+  const email = $('loginEmail');
+  if (!email.reportValidity()) return;
+  const redirectTo = new URL(location.pathname, location.origin);
+  redirectTo.searchParams.set('recover', '1');
+  const { error } = await db.auth.resetPasswordForEmail(email.value.trim(), { redirectTo: redirectTo.href });
+  if (error) throw error;
+  status('Check your email for the password reset link.');
+}));
+$('recoveryForm').addEventListener('submit', e => {
+  e.preventDefault();
+  perform($('savePassword'), async () => {
+    const { data, error: userError } = await db.auth.getUser();
+    if (userError || !recoveryUserId || data.user?.id !== recoveryUserId) {
+      throw Error('The recovery session expired. Open a fresh password reset link.');
+    }
+    const { error } = await db.auth.updateUser({ password: $('newPassword').value });
+    if (error) throw error;
+    $('newPassword').value = '';
+    recoveryUserId = '';
+    await db.auth.signOut({ scope: 'local' });
+    history.replaceState(null, '', location.pathname);
+    panel('loginPanel');
+    status('Password updated. Sign in with your new password.');
+  });
+});
 $('loginForm').addEventListener('submit',e=>{e.preventDefault();perform($('loginButton'),async()=>{const r=await db.auth.signInWithPassword({email:$('loginEmail').value.trim(),password:$('loginPassword').value});$('loginPassword').value='';if(r.error)throw r.error;await resolve(r.data.user)})});
 $('signOutButton').addEventListener('click',e=>perform(e.target,async()=>{await stopCamera();await db.auth.signOut();role='';me=null;clearPersonal();panel('loginPanel');status('Signed out. Use another CIRCLE test login. Approved staff requests can be resumed after signing back in.')}));
 $('changeConnection').addEventListener('click',e=>perform(e.target,async()=>{await db.auth.signOut();db=null;panel('connectionPanel');status('Enter the existing public CIRCLE project settings.')}));
